@@ -1,0 +1,40 @@
+<h3 style="text-align: center;">
+    All Data From Database
+</h3>
+
+<button style="float:left"><a class="btn" style="width:250px" href="/tree/list">Show All Data</a> </button>
+<button style="float:right"><a class="btn" style="width:250px" href="/tree">Submit New Data</a> </button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Tree Height</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.latitude}}</td>
+            <td>{{this.longitude}}</td>
+            <td>{{this.height}}</td>
+            <td>
+                <a href="/tree/{{this._id}}">Edit</a>
+                <a href="/tree/delete/{{this._id}}" onclick="return confirm('Do you want to delete ?');">
+                    Delete
+                </a>
+               
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<button><a class="btn btn-block" style="width:250px" href="/tree/api/sortLatitude">Sort Ascending Latitude </a> </button>
+<button style="float: right;"><a class="btn btn-block" style="width:250px" href="/tree/api/sortName">Sort Ascending  Name </a> </button>
+<button><a class="btn btn-block" style="width:250px" href="/tree/api/sortLongitude">Sort Ascending Longitude </a> </button>
+<button style="float: right;"><a class="btn btn-block" style="width:250px" href="/tree/api/sortHeight">Sort Ascending  Tree Height </a> </button>
+<button><a class="btn btn-block" style="width:250px" href="/tree/api/filterHeightLt50">Filter Tree Height Less Than  50 </a> </button>
+<button style="float: right;"><a class="btn btn-block" style="width:250px;" href="/tree/api/filterHeightGt50">Filter Tree Height Greater Than  50 </a> </button>
