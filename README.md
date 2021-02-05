@@ -15,7 +15,7 @@ GMT 351 – Geospatial Data Management Project was implemented using Node.js and
 
 ```
 
- 1. download code folder from https://github.com/HilalEKC/resit_project
+ 1. download code folder from https://github.com/HilalEKC/GMT351_project
  2. open Visual Studio Code
  3. go to folder that contains package.json
  4. open terminal
