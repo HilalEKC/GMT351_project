@@ -1,4 +1,4 @@
-# NodeJS Example Application
+# NodeJS and MongoDB Example Application
 GMT 351 – Geospatial Data Management Project was implemented using Node.js and MongoDB
 
 ## Install
